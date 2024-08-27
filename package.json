@@ -21,13 +21,16 @@
   ],
   "type": "module",
   "packageManager": "pnpm@9.1.1",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "ci": "pnpm run build",
     "format": "prettier --write .",
-    "check-format": "prettier --check ."
+    "check-format": "prettier --check .",
+    "check-exports": "attw --pack .",
+    "ci": "pnpm run check-format && pnpm run build && pnpm run check-exports"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.15.4",
     "prettier": "^3.3.3",
     "typescript": "^5.5.4"
   }
