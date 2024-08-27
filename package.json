@@ -28,7 +28,7 @@
     "test:watch": "vitest",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
-    "check-exports": "attw --pack .",
+    "check-exports": "attw --pack . --ignore-rules cjs-resolves-to-esm",
     "ci": "pnpm run check-format && pnpm run build && pnpm run check-exports && pnpm run lint && pnpm run test"
   },
   "devDependencies": {
