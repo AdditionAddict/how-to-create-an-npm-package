@@ -26,6 +26,7 @@
     "build": "tsc",
     "test": "vitest run",
     "test:watch": "vitest",
+    "lint": "tsc --noEmit",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "check-exports": "attw --pack . --ignore-rules cjs-resolves-to-esm",
