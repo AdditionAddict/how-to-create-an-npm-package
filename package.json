@@ -24,14 +24,17 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "check-exports": "attw --pack .",
-    "ci": "pnpm run check-format && pnpm run build && pnpm run check-exports"
+    "ci": "pnpm run check-format && pnpm run build && pnpm run check-exports && pnpm run lint && pnpm run test"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.4",
     "prettier": "^3.3.3",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
   }
 }
